@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>exercise</title>
+    </head>
+    <body>
+        <h1>exercise for objects</h1>
+        <script>
+           /* const artist =(
+                name="lisa",
+                favColor = "blue",
+                talent = "dancer",
+                code = 04
+
+            )
+            function createArtist(name,favColor,talent,code){
+                return{
+                    name:name,
+                    favColor:favColor,
+                    talent:talent,
+                    code:code
+                }}
+            const jennie =createArtist("jennie","black","rapper",05);
+
+            function Artist(name,favColor,talent,code){
+                this.name =name;
+                   this. favColor =favColor;
+                    this.talent =talent;
+                    this.code =code;
+            }
+            const rosaline =new Artist( "rosaline","purple","vocalist",06)
+            const lisa =new Artist( "lisa","blue","dancer",134)
+            const jisoo=new Artist("soyaaa","pink","visual",78)*/
+            //classes
+           /* class Prank{
+                constructor(name,style,price,discount){
+                    this.name =name;
+                    this.style =style;
+                    this.price =price;
+                    this.discount =discount;
+                }
+                get getDiscountValue(){
+                    return this.discount;
+                }
+               get discountValue(){
+                    return this.discount * this.price/100
+                }
+            }
+            let ring = new Prank("sathin","awein chawal",15000,20);*/
+            class Product{
+                constructor(itemName){
+                    this.itemName=itemName;
+                }
+                getItemName(){
+                    return this.itemName + "is a jewlery";
+                }
+            }
+            class Necklace extends Product{
+                constructor(itemName){
+                    super(itemName);
+                }
+                getItemName(){
+                    return this.itemName+ "is a icon too";
+                }
+            }
+            let ring=new Product("ring");
+            let haar=new Necklace("haar");
+        </script>
+    </body>
+</html>

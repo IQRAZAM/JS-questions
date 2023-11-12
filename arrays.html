@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>arrays in JS</title>
+    </head>
+    <boady>
+        <h1>ARRAYS</h1>
+        <script>
+          /*  const num =new Array(1,2,3,4,5,6);
+            console.log(num);
+            num.push(49);
+            console.log(num.push)
+            num.unshift(2389);
+            console.log(num.unshift())
+            num[5] = "zootopia"
+            console.log(num);*/
+            const channels =[{
+                sub:23,
+        
+                sub:240,
+            
+                sub:879350856
+            }];
+            console.log(channels.find(function(element){
+                return element.sub===879350856
+            }))
+            let name1 = ["sana","sania","saba"]
+            let name2 =["amna","absha","abdinq"]
+            console.log(name1.concat("alice in the wonderland"))
+            for(let i=0; i<name1.length; i++){
+                console.log(name1[i])
+            }
+            for(let name2 of name1){
+                console.log(name2)
+            }
+            name2.forEach(function(name,index){
+                console.log(name2,index);
+            })
+            let fashion=["s","u","h","a","n","i"]
+            fashion=fashion.join('/');
+            console.log(fashion.split('/'))
+            let subscribers = [
+                {subs:10000},
+                {subs:30000},
+                {subs:60000},
+                {subs:50000},
+                {subs:40000},
+                {subs:100000},
+            ]
+            //console.log(subscribers.filter(num=>num.subs<50000))
+            console.log(subscribers.map(num=>num.subs * 2))
+
+
+
+        </script>
+    </boady>
+</html>

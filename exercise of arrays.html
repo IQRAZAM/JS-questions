@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>exercise for arrays</title>
+    </head>
+    <body>
+        <h1>arrays practice</h1>
+        <script>
+            let groups = [
+                {
+                    name:"blackpink",
+                    members:"4",
+                    country:"south korea",
+                    followers:"300",
+                    fvGirl:"jennie"
+                },
+                {
+                    name:"itzy",
+                    members:"5",
+                    country:"south korea",
+                    followers:"200",
+                    fvGirl:"ryujin"
+                },
+                {
+                    name:"manabu",
+                    members:"6000000",
+                    country:"thailand",
+                    followers:"700",
+                    fvGirl:"unaenda"
+                },
+                {
+                    name:"spark girls",
+                    members:"7",
+                    country:"malaysia",
+                    followers:"300",
+                    fvGirl:"akuda"
+                },
+                {
+                    name:"youth yes",
+                    members:"3",
+                    country:"france",
+                    followers:"1000",
+                    fvGirl:"guandana"
+                }
+            ]
+            console.log(groups);
+            //now getting names of all groups
+            const names = groups.map(nam =>nam.name);
+            console.log(names)
+            //an array with just name and members
+            const nameMembers = groups.map(nm => {
+                return{
+                    name:nm.name,
+                    members:nm.members
+                }
+            })
+            console.log(nameMembers)
+            //addding all the members in the preasent array
+            const allMembers = groups.reduce((prevMembers,group) => {
+                return prevMembers + Number(group.members);
+            },0)
+            console.log(allMembers)
+            //get followers greater than 3 million
+            console.log(groups.filter(grp => grp.followers==300))
+            //gt souyk korean group
+            console.log(groups.filter(con => con.country=="south korea"))
+            // we can use sort() for sorying according to character and names and genders
+            //sort by followers
+            const sorting = groups.sort((f1,f2) =>{
+                if(f1.followers>f2.followers){
+                    return 1
+                }
+                if(f1.followers<f2.followers){
+                    return -1
+                }
+            }
+            )
+            console.log(sorting)
+            //checking if every group is from south korea  - false-
+            console.log(groups.every(cons => cons.followers>"100"))  //true
+
+            //this some method is used if aktleast one chatacter has value
+            console.log(groups.some(da => da.fvGirl== "jennie"))
+
+
+
+
+            //global scope
+            function me(){
+                let x="sana"
+                console.log(x);
+                function childOfMe(){
+                    let x="berbel"
+                    console.log(x)
+                }
+                childOfMe()
+            }
+            me()
+            
+
+
+            //hoisting 
+            sayHello()
+            console.log(d)
+                 function sayHello(){
+                    console.log("hello")
+                 }
+                 var d=235;
+                 console.log(d)
+
+
+                 //using this keyword
+                 let counter = createCounter();
+                 let counter1 = createCounter();
+                 function createCounter(){
+                    return{
+                        count:0,
+                        increment: function(){
+                            this.count++;
+                        }
+                    }
+                 }
+              counter.increment();
+              counter.increment();
+              counter.increment();
+              counter.increment();
+              counter.increment();
+              console.log(counter)
+
+
+
+              //now we can this also like taht 
+              var count = 0;
+              function increment(){
+                count++
+              }
+              increment()
+              increment()
+              console.log(count)
+
+              //this can also be used in console.log
+
+              console.log(this)
+
+              //constructor function a;so use this keyword
+              function Group(name){
+                this.name=name;
+                this.famous= function(){
+                    console.log(this.name + "famous")
+                }
+              }
+              let blackpink = new Group("blackpink")
+              console.log(name)
+        </script>
+    </body>
+</html>

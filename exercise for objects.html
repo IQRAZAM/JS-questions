@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>exercises</title>
+    </head>
+    <body>
+        <h1>PRACTICE EXERCISE OF OBJECTS</h1>
+        <script>
+            //getting area of the square
+            let square ={
+                side : 5,
+                get area(){
+                    return this.side ** 2
+                }
+            }
+            square.side = 10;
+            console.log(square)
+
+            //using join function adding strings together
+            let itzy = ["ryujin","lia","yuna","chearyong","yeji"]
+            console.log(itzy.join("+"))
+           // without using join function
+           console.log(itzy.concat("+"))
+           //destructuring
+           let a,b,rest;
+           [a,b]=[234,8767];
+           [a,b,...rest]=[234,8767,5,97,90,54,78];
+           console.log(a);
+           console.log(b);
+           console.log(rest)
+           //match housiong method
+           //as there are six match sticks are used to make one stick is commeon in 2 houses and so on
+           function matchStick(house){
+            if(house <= 0){
+                return 0;
+            } else{
+                return house * 6 - house + 1
+            }
+           }
+           console.log(matchStick(2))
+           console.log(matchStick(1))
+           console.log(matchStick(0))
+           console.log(matchStick(54))
+        </script>
+    </body>
+</html>

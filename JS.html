@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>my JS practice</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <button>hello world!</button>
+       
+        <script>
+           /*  var modeOfPayment;
+        modeOfPayment=prompt("mode of payent");
+        alert(firstName+"successfully bought"+java+"using"+modeOfPayment)
+
+
+        var time = prompt("hey what are you feeling");
+        if(answer == happy){
+            console.log("love you")
+        }else{
+            console.log("hate you")
+        }*/
+           /* var qualities = prompt("wrie name of the person ");
+               switch("qualities"){
+                case"sana":
+                console.log("she is brave");
+                break;
+                case"rabia":
+                console.log("she is cute");
+                break;var qualities = prompt("name of girl");
+         
+                case"wareesha":
+                console.log("she is prettiest");
+                break;
+                case"ayesha":
+                console.log("she is mad");
+                break;
+                default:
+                    console.log("plz be patience we can work for it");
+                    break;
+            }
+
+            let a = prompt("hey what's  your age?")
+            //a = number.parenInt(a)
+            if(a>667){
+                alert("this is a valid age "),
+                alert ('welcome to our site')
+            }
+            else if(a>6){
+                alert('haters gonna hate me when im  coming through')
+            }
+            else{
+                alert("plz go and drink milk .baby!!")
+            }
+            //Switch statement
+            let member = prompt('who is she ?')
+            switch(member){
+                case 'lisa':
+                    console.log('she is a blackpink member');
+                    break;
+                case 'ryujin':
+                case 'lia':
+                        console.log('she is a itzy member');
+                        break;
+                        default:
+                            console.log('she is not in kpop')
+
+            }*/
+           // let age = prompt('whats your age?');
+           // if(age>=10,20){
+               // alert('its valid')
+           // }
+           // else{
+             /*   alert('got ya')
+            }
+            //practice
+            //if number is divided by 3 and 2 
+            let number = prompt('what is your number')
+            if(number%2==0){
+                alert('this is yur destined number')
+            }
+            else if(number%3==0){
+                alert('you are on the right path girl')
+            }
+            else{
+                alert('you need to focus on mathematics bra')
+            }
+            //using ternary ooperator for different conditions
+            let age = 19
+            let b = age > 18? "you can drive" : "you cannot drive"
+            console.log(b)*/
+           // FUNCTIONS IN JS
+           /*let we have some numbers that we want to perform average on them and also
+           add 1 in them so imstead of adding that number again and agai we will make a function and then 
+           can perform that operation agqin again using that specific function*/
+           //example
+         /*  function onePlusAvg(x,y){
+            
+            return 1 + ( x + y ) / 2;
+            console.log("done")
+           }
+           let f = 2;
+           let b  = 5; 
+           let g = 7;
+           console.log("the one plus average of f and g is",onePlusAvg(f,g))
+           console.log("the one plus average of f and b is",onePlusAvg(f,b))
+so in order to change we dont have to change every single line we just need to add changes in function*/
+//it is very impoertant to call a fuction.
+ /* let a = 45; 
+  let b  = 4;
+  console.log ("a/b = ",a/b)
+  console.log ("a%b = ",a%b)
+  console.log ("a*b = ",a*b)
+  console.log ("++a = ", ++a)
+  console.log ("--a ",--a)
+  let d =  prompt('what is your age?')
+  if(d >=18){
+    alert('you can drive');
+  }else if(d>10 && d<18){
+    alert('you are a kid you cannot drive');
+  }
+  else{
+    alert('you are still a kid you need to learn but cant drive yet');
+}*/
+/*let r = prompt('whats your age ?')
+console.log('you can ' ,(r>=18? 'party': 'not party'));
+let sum = 0;
+let n = prompt('enter the number')
+n = Number.parseInt(n);
+for (let i = 0 ; i<n ; i++){
+    sum  += (i+1);
+}
+console.log("sum of " + n + "natural number is" + sum)
+let p = prompt("enter value of number")
+let i = 0;
+while(i<p){
+    console.log(i)
+    i++;
+}*/
+//Using functions 
+/*
+function multi(a,b,c){
+    return a+b+c
+}
+let e = 56
+let d = 78
+let f = 333
+console.log(multi(e,d,f))
+const anneo = ()=>{
+    console.log( 'hey what are you doing here and speaking that language')
+}
+anneo();*/
+// Q 1 : wrte a program to print the marks of the students in an object using for loop
+ /*  let marks = {
+    hania : 45 ,
+    haris : 46 ,
+    shubnamn : 95 ,
+    ssukaina : 4 ,
+    ainaKhan : 53 ,
+    sparkluJanu : 25 ,
+ }
+  for(let i = 0;i<Object.keys(marks).length;i++){
+   // console.log("the marks of "+ Object.keys(marks)[i]  + "are" + marks[Object.keys(marks)[i]])
+  }
+  //Q2 write the program in question 1 using for in loop
+    for (let key in marks){
+        console.log("the marks of " + key + "are" + marks[key])
+    }*/
+    //Q3 write a program to print try again until the user writes the correct number
+       /* let cn = 24
+        let a ;
+        while(a != cn){
+         a  = prompt("guess the right number between 1 and 100")
+         alert("try again")
+        }
+        alert("you have entered the right number ")*/
+        //Q5 write a function to find the mean of five numbers 
+         /*function mean (a,b,c,d,e){
+
+            return (a+b+c+d+e)/5
+        }
+        
+        console.log(mean(23,5,4,3,56))*/
+        //Q1 What will following print in the java scrit
+      /*  console.log("har\"".length)
+        //Q2 explore the includes starts with and ends with function of the JS
+        const str = 'This is my example string!';
+const substr = 'my';
+
+console.log(str.includes(substr));
+console.log(`the word " ${substr}" ${str.includes(substr) ? 'is' : 'is not'} in the sentence`)
+//Q3 write a program to convert simple string into lower case 
+
+let spa = "yoU brOke ME fiRst"
+console.log(spa)
+console.log(spa.toLowerCase())
+console.log(spa.toLocaleUpperCase())
+//Q4 extrat the amount out of this string "plz give the rupees 1000"
+let string = "plz give me rupees 1000"
+let num = Number.parseInt(string.slice(19))
+console.log(num)
+console.log(typeof num)
+//Q5 try to cangr 4 characters of a string ?
+let song = "i'm my mother's savage daughter"
+console.log(song)
+let song2 = song.replace("daughter","Donkey")
+console.log(song2) 
+//you can make a new string but you cant change an existing string bc string is immutable 
+//Making array with for loop 
+let stars = ['david','malaika','roshni','sumita']
+console.log(stars.length)
+for(let i = 0;i<stars.length;i ++){
+    console.log(stars[i])
+}
+//forEach loop 
+console.log(typeof stars)
+let number = [1, 4,4,4,3,21,1]
+number.forEach((element)=>{
+   console.log(element*element)
+})
+//usig map method
+number.map((value , index ,array)=>{
+    console.log(value,index,array)
+})
+//using array filter method
+ let a = number.filter((value)=>{
+    return value<13
+  })
+  console.log(a)*/
+  //chapter5 practice set 
+  // Q1 give an array of the number and take input from user to add numbers in the array
+  /* let array = [ 1,2,3,4,5]
+   let user =[ prompt("add a number bigger than 5")]
+    user =Number.parseInt(user)
+     let p = array.concat(user)
+     console.log(p)*/
+     //Q2 keep adding number into th above array until 0 is added to it 
+    /* let array = [ 1,2,3,4,5]
+   let user;
+   while(user != 0){
+    // user =[ prompt("add a number smaller than 5")]
+    // alert('try again ')
+   }
+   alert('entered right number')
+    user =Number.parseInt(user)
+     let p = array.concat(user)
+     console.log(p)*/
+     //Q3 filter for numbers divisible by 10 in an array
+     let q =[10 , 3,70,34,67,80,200]
+     console.log(q)
+     let q2 = q.filter((q)=>{
+         return q%10 == 0
+     })
+     console.log(q2)
+     //Q4 create an array of square of given numbers
+     let spa = [2,3,4,5,5,6,7]
+       let s =spa.map((spa)=>{
+        return spa * spa
+      })
+      console.log(s)
+      //Q5 use reduce to calcute factorial of given number from an array of first natural numbers(n being the number whose factoorial be calculated)
+      let spark = [1,2,3,4,5,5,6,7]
+       let sp =spark.reduce((x1 , x2)=>{
+        return x1 * x2
+      })
+      console.log(sp)
+
+          
+        </script>
+    </body>
+
+</html>

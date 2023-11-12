@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>objects in JS</title>
+    </head>
+    <body>
+        <h1>practicing objects</h1>
+        <script>
+            function buyBottles(color,type,picture,price,discount){
+                this.color=color;
+                this.type=type;
+                this.picture=picture;
+                this.price=price;
+                this.discount=discount;
+            
+            }
+            const bottle1 = new buyBottles("red","curly","turkey",1300,5);
+
+            const bottle2 = new buyBottles("green","round","singapore",1300,6);
+
+            const bottle3 = new buyBottles("blue","zigzag","france",1300,10);
+
+            const bottle4 = new buyBottles("purple","curly","switzerland",1300,67);
+
+            const bottle5 = new buyBottles("black","curly","malaysia",1300,9);
+
+            const bottle6 = new buyBottles("orange","curly","poland",1300,98);
+
+
+        </script>
+    </body>
+</html>

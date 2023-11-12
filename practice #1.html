@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js practice</title>
+</head>
+<body>
+    <h1>practice of 2nd course of JS</h1>
+    <script>
+        //addin string and number
+        let a = "harry";
+        let c = 3;
+        let b = 5;
+
+        console.log(a+b+c)
+        //finding tye of
+        console.log(typeof a)
+        console.log(typeof (a+b+c))
+        //you can take a const but can't change it into anoter form after it
+
+        //but can add a new key into const object
+        const a1= {
+            name : "harry",
+            age : 65,
+            city : "ankara"
+        }
+        a1["friend"] = "sana"
+        console.log(a1)
+        //can also change name
+        a1['name'] = "gatar"
+        console.log(a1)
+        //making dictionary of 5 words
+        const words = {
+            fun:"lutf",
+            maza: "fun",
+            enjoy:"company",
+            company:"you"
+        }
+        console.log(words)
+        console.log(words.enjoy)
+
+        //aritmetic operators
+        let q = 40;
+        let g = 5;
+        console.log("q ** g",q ** g)
+        console.log("q%g",q%g)
+        console.log("q/g",q/g)
+        console.log("q--",q--)
+        console.log("q",q)
+        console.log("++g",++g)
+
+    </script>
+</body>
+</html>

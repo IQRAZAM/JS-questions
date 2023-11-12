@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>my javascriopt course</title>
+    </head>
+    <body> 
+      <style>
+        body{
+          background-color: yellow;
+        }
+      </style>
+        <script>
+           // LOOPS
+          // for( let i = 0;i <56;i++){
+               // console.log(i)
+          // }
+           //programme to add first n natural numbers
+          // let sum = 0;
+          // let n = prompt('write a natural number here!');
+          // n = Number.parseInt(n);
+           //for(let i = 0; i < n ; i++){
+           // sum += (i+1);
+         //  }
+          // console.log("so the sum of first" +  n + "natural number is"  + sum)
+          //FOR IN AND FOR OF LOOPS
+         /* let obj = {
+            sana : 56,
+            yaram : 57,
+            ubaid : 86,
+            umar : 96,
+
+          }
+          for(let a in obj){
+           // console.log(a)
+          }
+          for(let b of "yaram"){
+            //console.log(b)
+          }
+          //WHILE LOOP
+              let n = prompt("give the value a your fvrt number")
+                n = Number.parseInt(n)
+                let i = 0;
+                while(i<n){
+                    console.log(i);
+                    i++;
+                }*/
+               /* let n = prompt("give the value a your fvrt number")
+                n = Number.parseInt(n)
+                let i = 1;
+                do{
+                    console.log(i);
+                    i++;
+                }while(i<n)*/
+                 /* var qualities = prompt("wrie name of the person ");
+               switch("qualities"){
+                case"sana":
+                console.log("she is brave");
+                break;
+                case"rabia":
+                console.log("she is cute");
+                break;var qualities = prompt("name of girl");
+         
+                case"wareesha":
+                console.log("she is prettiest");
+                break;
+                case"ayesha":
+                console.log("she is mad");
+                break;
+                default:
+                    console.log("plz be patience we can work for it");
+                    break;
+            }
+
+            let a = prompt("hey what's  your age?")
+            //a = number.parenInt(a)
+            if(a>667){
+                alert("this is a valid age "),
+                alert ('welcome to our site')
+            }
+            else if(a>6){
+                alert('haters gonna hte me when im  coming through')
+            }
+            else{
+                alert("plz go and drink milk .baby!!")
+            }
+            //Switch statement
+            let member = prompt('who is she ?')
+            switch(member){
+                case 'lisa':
+                    console.log('she is a blackink member');
+                    break;
+                case 'ryujin':
+                case 'lia':
+                        console.log('she is a itzy member');
+                        break;
+                        default:
+                            console.log('she is not in kpop')
+
+            }*/
+           // let age = prompt('whats your age?');
+           // if(age>=10,20){
+               // alert('its valid')
+           // }
+           // else{
+             /*   alert('got ya')
+            }
+            //practice
+            //if number is divided by 3 and 2 
+            let number = prompt('what is your number')
+            if(number%2==0){
+                alert('this is yur destined number')
+            }
+            else if(number%3==0){
+                alert('you are on the right path girl')
+            }
+            else{
+                alert('you need to focus on mathematics bra')
+            }
+            //using ternary ooperator for different conditions
+            let age = 19
+            let b = age > 18? "you can drive" : "you cannot drive"
+            console.log(b)*/
+           // FUNCTIONS IN JS
+           /*let we have some numbers that we want to perform average on them and also
+           add 1 in them so imstead of adding that number again and agai we will make a function and then 
+           can perform that operation agin agin using that specific function*/
+           //example
+         /*  function onePlusAvg(x,y){
+            
+            return 1 + ( x + y ) / 2;
+            console.log("done")
+           }
+           let f = 2;
+           let b  = 5; 
+           let g = 7;
+           console.log("the one plus average of f and g is",onePlusAvg(f,g))
+           console.log("the one plus average of f and b is",onePlusAvg(f,b))
+so in order to change we dont have to change every single line we just need to add changes in function*/
+//it is very impoertant to call a fuction
+       //PRACTICE
+       //write a programme to print the marks of the student in an onject using for loop
+      /* let marks  = {
+        David: 56,
+        sawra:6,
+        becka:67,
+        savindar:56
+       }
+       for(let i = 0;i < Object.keys(marks).length;i++){
+        console.log("the marks of "   +   Object.keys(marks)[i]    +    "are" + marks[Object.keys(marks)[i]])
+       }*/
+       //object.keys act as arrays ..and array is normally something that store items we will read it in detail in next chapters.
+       //NOW USING FOR IN LOOP
+       /*let marks  = {
+        David: 56,
+        sawra:6,
+        becka:67,
+        savindar:56
+       }
+       for(let k in marks){
+        console.log("marks of" + k + "are" + marks[k] )
+       }*/
+       //WRite a programme to print try again until the user enter te right number
+      /* let Age = prompt("what's the age of David?")
+       if(Age == 67){
+        alert('yes,you are right')
+       }else{
+        alert('Try Again')
+       }*/
+       //using ANOTHER METHOD
+      /* let cn = 67
+       let i  
+       while( i != cn){
+        console.log("try again")
+        i =  prompt('enter a number')
+       }
+       console.log("yes its correct!")*/
+     /*  function MeanValue(d,f,g,h,j){
+        return(d+f+g+h+j)/5
+       }
+       let g = 5;
+       let k = 8;
+       let u = 98;
+       let i = 09;
+       let t = 76;
+       console.log("the average of these numbers are"+ MeanValue(g,k,u,i,t))*/
+       //SIMPLE METHOD
+      /* const mean = (a,b,c) =>{
+        return (a+b+c)/3
+       }
+       console.log(mean(8,89,10))*/
+       /*ESCAPE SEQUENCE CHRACTER
+       let fruit  = "baurik\"vhgn"
+       console.log(fruit)*/
+       //.REPLACE METHOD
+      /* let group = "itzy"
+       console.log(group)
+       console.log(group.replace("itzy","mitzy"))*/
+      // let g = "        mena        "
+      // console.log(g)
+      // console.log(g.trim())
+     /* let fr = "hana" + "jenna" + "maniana"
+      console.log(fr[9])*/
+      //using for loop in string
+      /*let s = "hawana"
+      for(let i = 0; i < s.length();i++){
+        console.log(s)
+      }*/
+      //INCLUDES METHIOD IN STRINGS
+     /* let sentence = 'umar is getting married to Hale without his fathers permission'
+      let word = 'umar'
+      console.log(sentence.includes(word))
+      console.log(`this sentence contains word  "${word}" ${sentence.includes(word)? 'is' : 'is not'} present in the sentence` )*/
+      //USING STARTSWITH METHOD
+      /*let spark = 'mama i\'m in love with a crimoinal'
+      console.log(spark.startsWith('ma'))*/
+      /*let string = "HE IS A BAD BOY WITH A TAINTED HEART"
+      console.log(string)
+      console.log(string.toLowerCase())*/
+      //NOW GETTING AMOUNT OUT OF STRING
+    /*  let string = "the price of this dress is 30000"
+      let price = Number.parseInt(string.slice(26))
+      console.log(price)
+      console.log(typeof price)*/
+      //ARRAYS
+     /* let blackpink_members = ['lisa','jisoo','rose','jennie']
+      console.log(blackpink_members)
+      console.log(blackpink_members[2])
+      //changing valus of arrays 
+      blackpink_members[3] = 'janminaopata'
+      console.log(blackpink_members)*/
+     // let planets = ['jupiter','mars','earth','zahal']
+     /* for(i = 0; i < planets.length ; i++){
+        console.log(planets)
+      }*/
+     /* let f = planets.shift()
+      console.log(f,planets)
+      //SORT METHOD 
+      planets.sort()
+      console.log(planets)*/
+      //ARRAY MAP METHOD 
+     /* let a = [34,9,67,0]
+      let p = a.map((value,index)=>{
+        console.log(value,index)
+        return value + index
+      })
+      console.log(p)*/
+      /*let q = [5,4,8,51]
+      let r = q.reduce((h1,h2) =>{
+        return h1+h2
+      })
+      console.log(r)*/
+      //PRACTICE OF ARRAYS 
+      //Q : make a array of numbers get input from user and add value into that array
+     /* let array = [2,5,8,6,9,10]
+      let a  = prompt("enter the value of a ")
+      let R = array.push(a)
+      console.log(R)
+      console.log(array)*/
+      // Q: keep adding number to the array unless 0 is added to the array
+      /*let array = [2,5,8,6,9,10]
+      //using do while loop
+      let a;
+      do {
+        a = prompt("what is value of a")
+        array.push(a)
+      }while( a !=0){
+       // console.log(array)
+      }*/
+      // Q : filter for numbers divisivble by 10 in an array
+     /* let R = [50,8,90,7,63,10,70]
+      let a = R.filter((value)=>{
+        return value%10 == 0
+      })
+      console.log (a)*/
+     /* let R = [50,8,90,7,63,10,70]
+      let a = R.map((value)=>{
+        return value * value
+      })
+      console.log(a)*/
+     /* let R = [1,2,3,4,5,6]
+      let a = R.reduce((a1 , a2)=>{
+        return a1 * a2
+      })
+      console.log(a)*/
+      /*let a = confirm('do you want to marry TASHA')
+      console.log(a)*/
+     //Q make a prompt amd alert 
+      /*let a = prompt("what's your age ?")
+      if(a>=18){
+        alert("you can drive")
+      }else{
+        alert("you cannot drive")
+      }*/
+      //USING ABOVE QUESTION as user if he again add age
+      /*let runAgain = true
+      while(runAgain){
+        let a = prompt("what's your age ?")
+      if(a>=18){
+        alert("you can drive")
+      }else{
+        alert("you cannot drive")
+      }
+    runAgain = confirm("you wanna run that again?")
+    }*/
+    //USING CONSOLE ERROR IN ABOVE Q IF Age is negative
+   /* let runAgain = true
+      while(runAgain){
+        let a = prompt("what's your age ?")
+        if(a<0){
+          console.error("plz enter a valid age")
+          break;
+        }
+      if(a>=18){
+        alert("you can drive")
+      }else{
+        alert("you cannot drive")
+      }
+    runAgain = confirm("you wanna run that again?")
+    }*/
+   // Q :IF ASGE IS GREATER THAN 4 REDIRECT THE ADDRESS TO GOOGLE.COM 
+   /* let a = prompt("what's your age ?")
+        if(a>4){
+          location.href = "https://google.com"
+        }
+      else{
+        alert("it is fine")}*/
+        //Q : ASK TE USER AND CHANGE THE COLOR OF THE BACKGROUND ACCORDING TO IT 
+        let color = prompt("enter te background color you want") 
+        document.body.style.background = color
+        </script>
+    </body>
+</html>

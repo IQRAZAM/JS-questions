@@ -245,7 +245,7 @@ number.map((value , index ,array)=>{
      let p = array.concat(user)
      console.log(p)*/
      //Q3 filter for numbers divisible by 10 in an array
-     let q =[10 , 3,70,34,67,80,200]
+     /*let q =[10 , 3,70,34,67,80,200]
      console.log(q)
      let q2 = q.filter((q)=>{
          return q%10 == 0
@@ -262,7 +262,23 @@ number.map((value , index ,array)=>{
        let sp =spark.reduce((x1 , x2)=>{
         return x1 * x2
       })
-      console.log(sp)
+      console.log(sp)*/
+      let n = Math.floor(Math.Random() * 101)
+      let a ;
+      let score = 100;
+      while( a != n){
+        score = score -1
+        a = prompt("guess the number between 0 to 100")
+        if(a>n){
+            alert("this is greater than actual number")
+        }else if(a<n){
+            alert("this number is smaller than real number")
+        }else{
+            alert("you guessed the right number")
+            alert(`you guessed the number in  ${100 - score} tries` )
+            alert(`your score is ${score}`)
+        }
+      }
 
           
         </script>

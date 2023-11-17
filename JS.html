@@ -263,22 +263,75 @@ number.map((value , index ,array)=>{
         return x1 * x2
       })
       console.log(sp)*/
-      let n = Math.floor(Math.Random() * 101)
-      let a ;
-      let score = 100;
-      while( a != n){
-        score = score -1
-        a = prompt("guess the number between 0 to 100")
-        if(a>n){
-            alert("this is greater than actual number")
-        }else if(a<n){
-            alert("this number is smaller than real number")
-        }else{
-            alert("you guessed the right number")
-            alert(`you guessed the number in  ${100 - score} tries` )
-            alert(`your score is ${score}`)
-        }
+     /* let a = Math.floor(Math.random() * 101);
+       let n;
+        let score = 100
+        alert("remember the number is from 0 to 100")
+        while(n !=a){
+            score = score - 1;
+             n = prompt("Guess the value of random number a ?")
+         n = Number.parseInt(n);
+         if(n>a){
+            alert("this number is greater than real value")
+         }else if(n<a){
+            alert("this number is smaller than real value")
+         }
+         else{
+            alert("yes you guessed it right")
+            alert(`you guessed the number in  ${100 - score} chances` );
+        }}
+        console.log(`your score is ${score}`)*/
+
+     /* let obj =[2,3,2,1,1,3,4,6,7,8,9]
+      console.table(obj)
+      console.warn("hey plz dont smooke here")*/
+
+      //practice set chp # 6
+      // Q1 write a program using prompt function to take input of age as a value from the user and use alert to tell him if he can drive
+      /*let a = prompt("hey sir/mam , would you like to tell us your age ?")
+      a = Number.parseInt(a)
+      if(a>=18){
+        alert("you can drive")
+      }else{
+        alert("you cannot drive")
+      }*/
+      //Q2 use confirm to confirm the user if they want to run prompt again use previous question data
+     /* let runAgain = true;
+      while(runAgain){
+      let a = prompt("hey sir/mam , would you like to tell us your age ?")
+      a = Number.parseInt(a)
+      if(a>=18){
+        alert("you can drive")
+      }else{
+        alert("you cannot drive")
       }
+      runAgain = confirm("do you want to see prompt again?")
+    }*/
+   //Q3 use console.erroe if the age is given in negative numberr
+
+     /* let a = prompt("hey sir/mam , would you like to tell us your age ?")
+      a = Number.parseInt(a)
+      if(a>=18){
+        alert("you can drive")
+      } else if(a<0){
+        console.error("you can't use negative numbers")
+      }
+      else{
+        alert("you cannot drive")
+      }*/
+      //Q4 write a program to cahne the url to google.com if the user enters the number greater than the 4
+    /* let a = alert("let's answer a simple question")
+     let q = prompt("enter a number smaller than four")
+     if(a<=4){
+        alert ("nice try!")
+     }else{
+        alert("you dumbass go to google and learn something")
+        location.href = "https://www.google.com/"
+     }*/
+     //Q5 change the background of the page into green based on user input through prompt
+
+     let color = prompt("enter te color you love")
+     document.body.style.background = color
 
           
         </script>

@@ -333,6 +333,58 @@ number.map((value , index ,array)=>{
      let color = prompt("enter te color you love")
      document.body.style.background = color
 
+     /*Q: create a game the brower should ask you to get G S or W and then computer 
+       should be able to randomly generate these letters and then declare te winner according to that */
+       let user = prompt("let's play a game , enter G for gun , W foe water and S for snake .")
+        let comp1 = Math.floor(Math.random() * 3);
+        let comp = ["G" , "S" , "W"][comp1]
+       let match = (user,comp) => {
+        if (user == comp  &&  comp == user){
+            return "NOBODY"
+        }
+        else if ( user == "G"  && comp == "S"){
+        return "user"
+    }
+        else if ( user == "G"  && comp == "W"){
+        return "comp"
+    }
+        else if ( user == "S"  && comp == "G"){
+        return "comp"
+    }
+        else if ( user == "W"  && comp == "G"){
+        return "user"
+    }
+        else if ( user == "W"  && comp == "S"){
+        return "comp"
+    }
+        else if ( user == "S"  && comp == "W"){
+        return "user"
+    }
+
+       }
+       let result = match(user,comp)
+       document.write(`USER : ${user} <br> and COMP:${comp}  <br> \n The winner is : ${result}`)
+          
+       
+ let a = Math.floor(Math.random() * 101);
+       let n;
+        let score = 100
+        alert("remember the number is from 0 to 100")
+        while(n !=a){
+            score = score - 1;
+             n = prompt("Guess the value of random number a ?")
+         n = Number.parseInt(n);
+         if(n>a){
+            alert("this number is greater than real value")
+         }else if(n<a){
+            alert("this number is smaller than real value")
+         }
+         else{
+            alert("yes you guessed it right")
+            alert(`you guessed the number in  ${100 - score} chances` );
+        }}
+        console.log(`your score is ${score}`)
+
           
         </script>
     </body>

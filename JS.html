@@ -6,6 +6,21 @@
     </head>
     <body>
         <button>hello world!</button>
+        <nav class="navbar">
+            <ul>
+                <li>Home</li>
+                <li>about me</li>
+                <li>contact</li>
+                <li>talents</li>
+            <ul>
+        </nav>
+        <table>
+            <td>hello</td>
+            <tr>bro code</tr>
+            <tr>bro code</tr>
+            <tr>bro code</tr>
+            <tr>bro code</tr>
+        </table>
        
         <script>
            /*  var modeOfPayment;
@@ -330,12 +345,12 @@ number.map((value , index ,array)=>{
      }*/
      //Q5 change the background of the page into green based on user input through prompt
 
-     let color = prompt("enter te color you love")
-     document.body.style.background = color
+    // let color = prompt("enter te color you love")
+    // document.body.style.background = color
 
      /*Q: create a game the brower should ask you to get G S or W and then computer 
        should be able to randomly generate these letters and then declare te winner according to that */
-       let user = prompt("let's play a game , enter G for gun , W foe water and S for snake .")
+       /*let user = prompt("let's play a game , enter G for gun , W foe water and S for snake .")
         let comp1 = Math.floor(Math.random() * 3);
         let comp = ["G" , "S" , "W"][comp1]
        let match = (user,comp) => {
@@ -383,8 +398,30 @@ number.map((value , index ,array)=>{
             alert("yes you guessed it right")
             alert(`you guessed the number in  ${100 - score} chances` );
         }}
-        console.log(`your score is ${score}`)
+        console.log(`your score is ${score}`)*/
+        //Chp #7 practice set
+        //Q#1 create a navbar and change the color of its first element to red (by using DOM manipukation)
+     /* let t = document.getElementsByClassName("navbar")[0]
+     t.style.color = "blue"*/
+     //Q2 create a table without tbody and then use "view padw source " button to check whether it has tbody or not 
+     // ANS : no in page source but will show tbody in ispect browser
+     //Q3 create the element with three children and then change the color of 1st and last into green 
+ /* Array.from (  document.getElementsByClassName("navbar")[0].firstElementChild.style.color = "green")
+      Array.from(document.getElementsByClassName("navbar")[0].lastElementChild.style.color = "green")
 
+     let ctext = Array.from( document.getElementsByClassName("navbar")[0])
+     ctext.style.color = "blue"
+     console.log(ctext)*/
+     /*let tar = document.querySelectorAll(".navbar")
+     tar[0].style.color = "orange"
+     tar[1].style.color = "green"
+     tar[3].style.color = "blue"*/
+
+     //Q4 write a JS program to change the background of all the li tags into cyan color
+
+    Array.from( document.getElementsByTagName("li")).forEach((element)=>{
+        element.style.background = "cyan"
+    })
           
         </script>
     </body>

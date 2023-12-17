@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
         <title>my JS practice</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+         i'm start of the container(outer)
+        <div id="container"> 
+            i'm start of this container
+            <div class="first">im the first element here</div>
+            i'm end of this container
+        </div>
+        i'm end of the container(outer)
+        <span id="span" class="first" data-name="nakami" data-game="laziness">hey its me im the problem its me</span>
         <button>hello world!</button>
         <nav class="navbar">
             <ul>
@@ -422,7 +431,35 @@ number.map((value , index ,array)=>{
     Array.from( document.getElementsByTagName("li")).forEach((element)=>{
         element.style.background = "cyan"
     })
-          
+  // Array.from( console.log(document.getElementsByTagName("span")[0]))
+   console.log(document.body.firstChild.nodeName)
+   console.log(document.body.firstElementChild.nodeName)
+   console.log(span.innerHTML)
+  
+   //console.log(document.body.firstChild.data) 
+   //console.log(document.body.firstChild.nodeValue)   
+   console.log(document.body.textContent)  
+   let d = span.getAttribute("class")
+   console.log(d)
+   console.log(span.hasAttribute("class"))
+   console.log(span.hasAttribute("style"))
+   console.log(span.attributes)
+  // console.log(span.setAttribute("hidden","true"))
+   console.log(span.removeAttribute("class"))
+   console.log(span.dataset)
+   console.log(span.dataset.name)
+   //Insertion
+   let s = document.getElementsByTagName("span")[0]
+   s.innerHTML = s.innerHTML + '<h1>why us <h1>'
+    let p = document.getElementsByTagName("div")[0]
+     let div = document.createElement("div")
+     div.innerHTML = "<h1>not me here!<h1>"
+    // p.appendChild(div)
+   // p.prepend(div)
+   //p.after(div)
+   //p.replaceWith(div)
+
+ 
         </script>
     </body>
 

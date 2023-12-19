@@ -4,6 +4,18 @@
     <head>
         <title>my JS practice</title>
         <link rel="stylesheet" href="style.css">
+        <style>
+            .yellow{
+                background-color: yellow;
+            }
+            .text-color{
+                color: white;
+            }
+            .red{
+                background-color: red;
+                color: white;
+            }
+        </style>
     </head>
     <body>
          i'm start of the container(outer)
@@ -11,6 +23,9 @@
             i'm start of this container
             <div class="first">im the first element here</div>
             i'm end of this container
+        </div>
+        <div id="main">
+            <h2>micheal love chen rubine but scared to confess to her ! very sad</h2>
         </div>
         i'm end of the container(outer)
         <span id="span" class="first" data-name="nakami" data-game="laziness">hey its me im the problem its me</span>
@@ -458,6 +473,26 @@ number.map((value , index ,array)=>{
    // p.prepend(div)
    //p.after(div)
    //p.replaceWith(div)
+  // main.insertAdjacentHTML('beforebegin','<div class="rude">UGLY BITCH</div>')
+  // main.insertAdjacentHTML('afterbegin','<div class="rude">UGLY BITCH</div>')
+   //main.insertAdjacentHTML('beforeend','<div class="rude">UGLY BITCH</div>')
+  // main.insertAdjacentHTML('afterend','<div class="rude">UGLY BITCH</div>')
+  // main.remove()
+  main.className="yellow text-color"
+ // main.classList
+ main.classList.remove("text-color")
+ main.classList.add("red")
+console.log( main.classList.contains("yellow"))
+main.insertAdjacentHTML('beforebegin','<div class="rude">UGLY BITCH</div>')
+let v = setTimeout(function(){
+    alert("well thats alright becuase i like the way it hurt")
+},3000)
+console.log(v)
+//clearTimeout(v)
+let w = setInterval(function(){
+    alert("well thats alright becuase i like the way it hurt")
+},3000)
+ 
 
  
         </script>

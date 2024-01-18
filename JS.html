@@ -24,12 +24,17 @@
             <div class="first">im the first element here</div>
             i'm end of this container
         </div>
+        <div class="starter" onmouseenter="alert('you got the real rix bro')">
+            <button>they got te real signs of illness </button>
+        </div>
         <div id="main">
             <h2>micheal love chen rubine but scared to confess to her ! very sad</h2>
         </div>
         i'm end of the container(outer)
         <span id="span" class="first" data-name="nakami" data-game="laziness">hey its me im the problem its me</span>
-        <button>hello world!</button>
+        <div>
+        <button id="btn">hello world!</button>
+        </div>
         <nav class="navbar">
             <ul>
                 <li>Home</li>
@@ -443,32 +448,32 @@ number.map((value , index ,array)=>{
 
      //Q4 write a JS program to change the background of all the li tags into cyan color
 
-    Array.from( document.getElementsByTagName("li")).forEach((element)=>{
-        element.style.background = "cyan"
-    })
+    //Array.from( document.getElementsByTagName("li")).forEach((element)=>{
+       // element.style.background = "cyan"
+    //})
   // Array.from( console.log(document.getElementsByTagName("span")[0]))
-   console.log(document.body.firstChild.nodeName)
+   /*console.log(document.body.firstChild.nodeName)
    console.log(document.body.firstElementChild.nodeName)
-   console.log(span.innerHTML)
+   console.log(span.innerHTML)*/
   
    //console.log(document.body.firstChild.data) 
    //console.log(document.body.firstChild.nodeValue)   
-   console.log(document.body.textContent)  
+   /*console.log(document.body.textContent)  
    let d = span.getAttribute("class")
    console.log(d)
    console.log(span.hasAttribute("class"))
    console.log(span.hasAttribute("style"))
-   console.log(span.attributes)
+   console.log(span.attributes)*/
   // console.log(span.setAttribute("hidden","true"))
-   console.log(span.removeAttribute("class"))
+   /*.log(span.removeAttribute("class"))
    console.log(span.dataset)
-   console.log(span.dataset.name)
+   console.log(span.dataset.name)*/
    //Insertion
-   let s = document.getElementsByTagName("span")[0]
+  /* let s = document.getElementsByTagName("span")[0]
    s.innerHTML = s.innerHTML + '<h1>why us <h1>'
     let p = document.getElementsByTagName("div")[0]
      let div = document.createElement("div")
-     div.innerHTML = "<h1>not me here!<h1>"
+     div.innerHTML = "<h1>not me here!<h1>"*/
     // p.appendChild(div)
    // p.prepend(div)
    //p.after(div)
@@ -478,22 +483,39 @@ number.map((value , index ,array)=>{
    //main.insertAdjacentHTML('beforeend','<div class="rude">UGLY BITCH</div>')
   // main.insertAdjacentHTML('afterend','<div class="rude">UGLY BITCH</div>')
   // main.remove()
-  main.className="yellow text-color"
+  //main.className="yellow text-color"
  // main.classList
- main.classList.remove("text-color")
- main.classList.add("red")
-console.log( main.classList.contains("yellow"))
-main.insertAdjacentHTML('beforebegin','<div class="rude">UGLY BITCH</div>')
-let v = setTimeout(function(){
+// main.classList.remove("text-color")
+// main.classList.add("red")
+//console.log( main.classList.contains("yellow"))
+//main.insertAdjacentHTML('beforebegin','<div class="rude">UGLY BITCH</div>')
+/*let v = setTimeout(function(){
     alert("well thats alright becuase i like the way it hurt")
 },3000)
-console.log(v)
+console.log(v)*/
 //clearTimeout(v)
-let w = setInterval(function(){
-    alert("well thats alright becuase i like the way it hurt")
-},3000)
- 
-
+//let w = setInterval(function(){
+   /* alert("well thats alright becuase i like the way it hurt")
+},3000)*/
+  
+/*btn.addEventListener('click',function(e){
+    alert("hello world")
+})
+btn.addEventListener("click",function(e){
+    alert("hello world 2 ")
+})*/
+let x = function(e){
+    alert("hello world")
+}
+let y = function(e){
+    alert("hello world 2")
+}
+btn.addEventListener("click",x)
+btn.addEventListener("click",y)
+let q = prompt("give me your number");
+if(q == 2){
+    btn.removeEventListener('click',x)
+}
  
         </script>
     </body>

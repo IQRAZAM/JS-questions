@@ -15,9 +15,18 @@
                 background-color: red;
                 color: white;
             }
-        </style>
-    </head>
-    <body>
+            #bulb{
+                height: 300;
+                width: 300;
+                background-color: pink;
+            }
+                    </style>
+</head>
+</body>
+	<div id="bulb" class="bulbcontainer bulb">here we go again</div>
+	
+        <h1>my fvrt bookmarks </h1>
+        <a href="https://www.pinterest.com/pin/844493673547883/" >bookmark#1</a>
          i'm start of the container(outer)
         <div id="container"> 
             i'm start of this container
@@ -50,6 +59,10 @@
             <tr>bro code</tr>
             <tr>bro code</tr>
         </table>
+        <button onclick="alert('stay away from her1')">1</button>
+        <button onclick="alert('stay away from her2')">2</button>
+        <button onclick="alert('stay away from her3')">3</button>
+        <button id="bookmark">bookmark</button>
        
         <script>
            /*  var modeOfPayment;
@@ -504,7 +517,7 @@ console.log(v)*/
 btn.addEventListener("click",function(e){
     alert("hello world 2 ")
 })*/
-let x = function(e){
+/*let x = function(e){
     alert("hello world")
 }
 let y = function(e){
@@ -515,9 +528,405 @@ btn.addEventListener("click",y)
 let q = prompt("give me your number");
 if(q == 2){
     btn.removeEventListener('click',x)
+}*/
+//PRACTICE SET chapter 8
+//Q1 ; write a program to show different alerts when different buttons are clicked?
+ //ans in html code and butttons we will simply use onclick function in button tag in html
+ //Q2 ; create a website which is capable of storing your fvrt bookmarks using href?ANS IN HTML
+ //can also solve b using event listener
+ /*document.getElementById("bookmark").addEventListener('click',function(){
+    window.location="https://www.pinterest.com/pin/689332286743583419/";
+    win.focus()
+ })*/
+ //q4 write a JS program to keep fetching the content of a website everyfivr second?
+// Function to fetch the website content
+/*async function fetchWebsiteContent(url) {
+  try {
+    const response = await fetch(url);
+
+    // Check if the fetch was successful (status code 200)
+    if (!response.ok) {
+      throw new Error(`Failed to fetch the website. Status: ${response.status}`);
+    }
+
+    // Get the text content of the website
+    const websiteContent = await response.text();
+    console.log(websiteContent);
+  } catch (error) {
+    console.error(error);
+  }
 }
+
+// Fetch the website content every 5 seconds
+const intervalId = setInterval(() => {
+  fetchWebsiteContent('https://jsonplaceholder.typicode.com/todos/1');
+}, 5000);
+
+// To stop fetching the content after a certain time, you can use clearInterval
+// For example, to stop fetching after 30 seconds:
+setTimeout(() => {
+  clearInterval(intervalId);
+}, 30000);*/
+//Q5 create a glowing bulb effect using classlist toggle method ion javascript?
+/*setInterval(async function(){
+    document.querySelector("#bulb").classList.toggler("bulb")
+},300)*/
  
+//callback
+/*function loadScript(src){
+    var script = document.createElement("script");
+    script.src = src;
+    script.onload = function(){
+        console.log("Loaded script with SRC :"+ src)
+    }
+    document.body.appendChild(script);
+}
+    loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" )*/
+
+    //now we will also run a specific function after seeig if specific link is prsent in the body or not 
+   /* function loadScript(src,callback){
+    var script = document.createElement("script");
+    script.src = src;
+    script.onload = function(){
+        console.log("Loaded script with SRC :"+ src)
+        callback();
+    }
+    document.body.appendChild(script);
+}
+ function stay(){
+    alert("just stay with me!")
+ }
+    loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" ,stay)*/
+    //we can also load src within it by writing callback(src)
+ // PROMISES
+ /*let promise = new Promise(function(resolve,reject){
+    alert('hello world !!')
+    resolve(97896)
+ })
+
+ console.log(promise)*/
+ //UNDERSTANDING PROMISES
+ /* let promise = new Promise((resolve,reject)=>{
+    alert("promise is pending")
+    setTimeout(()=>{
+        alert("this is my fulfilling promise")
+        //resolve(true)
+        reject(new Error("i'm an error"))
+    },3000)
+
+  })
+  promise.catch((error)=>{
+    console.log("catching te error that occurred ")
+  })
+  console.log(promise)*/
+  /*let promise = new Promise((resolve,reject)=>{
+    alert("promise is pending")
+    setTimeout(()=>{
+        alert("this is my fulfilling promise")
+        //resolve(true)
+        reject(new Error())
+    },3000)
+
+  })
+      promise.then((value)=>{
+        console.log(value)
+  },(error)=>{
+    console.log(error)
+  })
+    console.log(promise)*/
+
+    //PROMISE CHAININ
+   /* let p1 = new Promise((resolve,rejected)=>{
+        setTimeout(()=>{
+            console.log(" promise willl be resolved after 2 seconds")
+            resolve(34)
+        },2000)
+    })
+    p1.then((value)=>{
+        console.log(value)
+        let p2 = new Promise((resolve,reject)=>{
+            resolve("promise 2")
+        })
+        return p2
+    }).then((value)=>{
+        console.log("we are done !")
+    })*/
+    // now writing the loadscript functon using promises
+
+   /* const loadScript = (src)=>{
+        return new Promise((resolve,reject)=>{
+            let script = document.createElement("script")
+            script.type = "text/javascript"
+            script.src = src
+            document.body.appendChild(script)
+            script.onload = () => {
+                resolve("script has beem loaded sir ")
+            }
+            script.onerror = (err) => { reject(0) }
+
+        })
+    }
+    let p1 = loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" )
+    p1.then((value)=>{
+        console.log(value)
+    }).catch((error)=>{
+        console.log("Error in loading scripts ", error);
+    })*/
+    //ATTACHING DIFFREENT HANDLERS TO ONE PROMISE WHILE IN PROMISE CHAIN WE ATTACH ONE THEN WAIT FOR IT AND THEN OTHER AS SO ON 
+
+     /* let p1 = p=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            alert("hey its promise and im not resolved yet")
+            resolve(1)
+        },2000)
+      })
+      p1.then(()=>{
+        console.log("im resolved now " )
+      })
+      p1.then(()=>{
+        console.log("yeahhhhhhhhh " )
+      })*/
+     /* let p1 =new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve(1)
+        },1000) 
+        })
+        let p2 =new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve(2)
+        },2000)
+    })
+        let p3 =new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve(3)
+        },3000)
+    })
+        let promise_all = Promise.all([p1,p2,p3])
+        promise_all.then((values)=>console.log(values))*/
+        //now if you run promise.all and one of the promise is not working then it will give errors to you for solving this we will use all settles
+       /* let p1 =new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve(1)
+        },1000) 
+        })
+        let p2 =new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            reject(new Error("error"))
+        },2000)
+    })
+        let p3 =new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve(3)
+        },3000)
+    })
+        let promise_all = Promise.allSettled([p1,p2,p3])
+        promise_all.then((values)=>console.log(values))*/
+        //promise.race    you will get the value of a promise which is fulfilled first if rejected then it will simply showa error
+        //promise.any gives actual resolved value like if the value which comes first has an error it wont give that value instead it will give reolved value 
+        //promise.resolve give a resolved value
+        //promise.reject gives a rejected value
+
+       /* async function smart(){
+            return 34;
+        }
+        smart().then((s)=>{
+            alert(s)
+        })*/
+     /* async function spark(){
+        let city1 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+            resolve("24 distance")
+        },3000)
+        })
+        let city2 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+            resolve("55 distance")
+        },5000)
+        })
+        console.log("fetching city1 distance wiat guys")
+        let first = await city1
+        console.log(`city1 distnace is being fteched`)
+        console.log("fetching distamce of city2")
+        let second = await city2
+        console.log("distancve of city2 is beinh fetched ")
+        return[city1 , city2]
+    }
+    let a = spark()
+        a.then((value)=>{
+            console.log(value)
+        })*/
+        //error handling in javascript
+         /* setTimeout(()=>{
+            console.log("hacking network....... please wait......")
+          },1000)
+          try{
+            console.log(rahul)
+          }
+          catch(error){
+            console.log("A pretty mistake")
+          }
+          setTimeout(()=>{
+            console.log("fetching passsword and username....... please wait......")
+          },2000)
+          setTimeout(()=>{
+            console.log("hacking Tnaia's network....... please wait......")
+          },3000)
+          setTimeout(()=>{
+            console.log("fetching he password and username....... please wait......")
+          },4000)*/
+          //THE ERROR OBJECT 
+         /* try{
+            spain
+          }
+          catch(error){
+            console.log(error)
+            console.log(error.message)
+            console.log(error.name)
+            console.log(error.stack)
+          }*/
+         /* try{
+            let age = prompt("Enter your age")
+            if (age>123){
+                throw new ReferenceError("this is not a valid age ,you are too old for this world !!")
+
+            }
+          }
+          catch(error){
+            console.log(error.name)
+            console.log(error.message)
+            console.log("got an issue sir ")
+          }
+          console.log("Script is stilll runing")*/
+          //FINALLY CLAUSE
+           /* try{
+                let s = 12;
+                console.log(d)
+                console.log("program ran succesfully")
+            }
+            catch(err){
+                console.log("we got an error sir")
+                console.log(love)
+            }
+            finally{
+              console.log("This is the final message")
+              //close the file
+              //exit the loop
+              //write to the log file etc....
+            }*/
+            //even if you return try AND code runs successfully still  it will go to the finally block
+           /* let f = (x) => {
+            try{
+                let s = 12;
+    
+                console.log("program ran succesfully")
+                return
+            }
+            catch(err){
+                console.log("we got an error sir")
+                console.log(love)
+            }
+            finally{
+              console.log("This is the final message")
+            }
+        }
+        f()*/
+        // CHAPTER 9 PRACTICE SET
+    //Q#1   write a program, to load a JS file in a browser using promise use .then to display an alert when the load in display when the load is complete 
+   /* const loadScript = async(src)=>{
+        return new Promise((resolve,reject)=>{
+            let script = document.createElement("script")
+            script.src = src
+            script.onload = ()=>{
+                resolve (src +  "  done successfully")
+            }
+            document.head.append(script)
+        })
+    }
+    let x =  loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js")
+    x.then((value)=>{
+        console.log(value + "  and script is loaded successfully")
+    })/*
+Q#2 WRITE A PROGRAM FORM PREVIOUS QUESTION AND USE ASYYNC /AWAIT SYNTAX 
+   /* const spark = async () =>{
+        console.log(new Date().getMilliseconds())
+        let x = await loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js")
+        console.log(x)
+        console.log(new Date().getMilliseconds())
+    }
+    spark()*/
+   // Q#3 CREATE A PROMISE WHICH REJECTS AFTER 3 SECONDS USE AN ASYNC OR AWAIT TO GET ITS VALUE AND ALSO USE A TRY CATCH TO HANDLE ITS ERRORS
+     
+  /* let promise = ()=>{
+
+    return  new Promise ((resolve,reject)=>{
+     setTimeout(()=>{
+        reject(new Error);
+   },3000)
+}) }
+let a = async()=>{
+    try {
+        let c = await promise()
+        console.log(c)
+    }
+        catch(err){
+            console.log("error has been gotten")
+    }
+}
+a()*/
+//Q#4 WRITE PROGRAM USING PRMISE.ALL INSIDE AN ASYNC AWAIT FUNCTION TO AWAIT 3 PEOMISES COMAPRE ITS RESULTS WITH THE CASE WERE WE AWAIT THESE PEOMISES ONE BY ONE
+
+   /* let p1 = async()=>{ return new Promise ((resolve,reject)=>{
+        setTimeout(()=>{
+        resolve ("new drama will e on air on sharp 6 O' clock")
+    },2000)
+    })}
+    let p2 = async()=>{ return new Promise ((resolve,reject)=>{
+        setTimeout(()=>{
+        resolve ("new drama will e on air on sharp 7 O' clock")
+    },4000)
+    })}
+    let p3 = async()=>{return new Promise ((resolve,reject)=>{
+        setTimeout(()=>{
+        resolve ("new drama will e on air on sharp 8 O' clock")
+    },6000)
+    })}*/
+ /*const run = async()=>{
+    console.time("run")
+console.log("wait for new annoucement") 
+let a1 = await p1()
+console.log("new annoucement has been given now wait for the second one ")
+let a2 = await p2()
+console.log("wait for othe one ")
+let a3 = await p3()
+console.log("all of the annoucements have been made")
+//return [first,second,third] 
+console.timeEnd("run")
+ }
+run()*/
+/*const run = async()=>{
+    console.time("run")
+console.log("wait for new annoucement") 
+let a1 =  p1()
+console.log("new annoucement has been given now wait for the second one ")
+let a2 =  p2()
+console.log("wait for othe one ")
+let a3 =  p3()
+console.log("all of the annoucements have been made")
+ let all =   await Promise.all([a1,a2,a3])
+console.timeEnd("run")
+ }
+ run()*/
+ // NOTE: so basically in promise all without awat everything happens together while in await it willwait for the given settimeout 
+
+        //DONE CHP#9 
+        
+
+          
+    
+
+
+
+
         </script>
     </body>
-
 </html>

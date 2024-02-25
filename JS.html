@@ -1020,6 +1020,33 @@ console.timeEnd("run")
         //Q1 : use the free api from internet and feed youe app with tha data 
 
       // see anime website
+      //Q2 create a note saving app which store your notes to te local storage
+    //   let a = prompt("enter your note !!")
+    //   localStorage.setItem("note",a)
+      //Q3 reapeat the ladst q and fetch the note which was saved
+     //let m =  localStorage.getItem("note")
+    // alert("you note is "+ m)
+     //Q4 delete the note in the previous question
+    //  let c = confirm("do you want to delete your note fromlocal storage?")
+    //  if(c){
+    //  localStorage.removeItem("note")
+    //  }
+              //***********prototype**************
+              let a = {
+                name : "star",
+                class : "G16"
+              }
+              let p = {
+              
+                 asain:()=>{
+                        alert("run")
+                }
+              }
+              p.__proto__ = {
+                idol : "lisa"
+              }
+              a.__proto__ = p
+              console.log(a.idol)//not in a bt related to p through prototype trchnique
         </script>
     </body>
 </html>

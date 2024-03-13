@@ -1095,6 +1095,58 @@ console.timeEnd("run")
               haris.submit()
               sana.cancel()
               sawra.submit()*/
+              //USING EXTENDS MEYHOS IN CLASS FOR INHERITANCE 
+                /*class Daughters{
+                    constructor(name,age,fvrtDress){
+                        this.name = name;
+                        this.age = age;
+                        this.fvrtDress = fvrtDress;
+                    }
+                    d1(){
+                        console.log(this.name + "is "+this.age+" years old and love to wear "+this.fvrtDress)
+                    }
+                        
+                }
+                let dau = new Daughters("sana",14,"kurta");
+                dau.d1();
+                class Step extends Daughters{
+                    music(){
+                        console.log(this.name+" loves to listen blackpink ")
+                    }
+                }
+                    let name = new Step("Sawra",14,"jeans");
+                    name.music()
+            }*/
+    //METHOD OF OVERRIDING
+    class employee{
+        constructor(name){
+            this.name = name;
+        }
+            login(){
+                console.log(`${this.name} has logged in `);
+            }
+            logout(){
+                console.log(`${this.name} ha logged out `)
+            }
+            chutti(leaves){
+                console.log(`you are being given ${leaves} leaves`)
+            }
+    }
+    class programmer extends employee{
+        coffee(x){
+            console.log(`${this.name} requires ${x} no. of cups of cofffee a day`)
+    }
+    chutti(leaves){
+        console.log(`you are being given ${leaves+1} leaves ( one extra)`)
+    }
+}
+    let name1 =  new employee("umar");
+    name1.login();
+    name1.chutti(7);
+    let name2 = new programmer("sawra");
+    name2.logout();
+    name2.chutti(2);
+                
         </script>
     </body>
 </html>
